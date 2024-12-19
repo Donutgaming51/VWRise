@@ -21,7 +21,7 @@ for i,v in pairs({"rise", "rise/CustomModules", "rise/Profiles", "rise/Assets", 
 
 local function riseGithubRequest(scripturl)
     print("1", scripturl)
-	local suc, res = pcall(function() return game:HttpGet('https://raw.githubusercontent.com/VapeVoidware/VWRise/main/'..scripturl, true) end)
+	local suc, res = pcall(function() return game:HttpGet('https://raw.githubusercontent.com/Donutgaming51/VWRise/main/'..scripturl, true) end)
 	writefile("rise/"..scripturl, res)
 	return readfile("rise/"..scripturl)
 end
@@ -337,11 +337,11 @@ local function loadRise()
 						loadstring(readfile("rise/NewMainScript.lua"))()
 					else
 						shared.RiseMode = true
-						loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWRise/main/NewMainScript.lua", true))()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/Donutgaming51/VWRise/main/NewMainScript.lua", true))()
 					end
 				else
 					shared.RiseMode = true
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWRise/main/NewMainScript.lua", true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/Donutgaming51/VWRise/main/NewMainScript.lua", true))()
 				end
 			end
 		]]
